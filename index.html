@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team - Git Training Demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #2d3748; min-height: 100vh; }
+    header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 48px 24px; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.8; }
+    .badge { display: inline-block; margin-top: 14px; background: #e94560; color: white; padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
+    main { max-width: 1100px; margin: 48px auto; padding: 0 24px; }
+    .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; color: #1a202c; }
+    .section-subtitle { color: #718096; margin-bottom: 32px; font-size: 0.95rem; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+    .card { background: white; border-radius: 16px; padding: 28px 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); transition: transform 0.2s ease; border-top: 4px solid #e94560; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+    .avatar { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 700; color: white; margin-bottom: 16px; }
+    .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+    .role { font-size: 0.85rem; color: #e94560; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; }
+    .fun-fact { font-size: 0.875rem; color: #718096; line-height: 1.5; border-top: 1px solid #edf2f7; padding-top: 10px; margin-top: 10px; }
+    .instructions { margin-top: 56px; background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+    .instructions h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; }
+    .steps { list-style: none; counter-reset: steps; }
+    .steps li { counter-increment: steps; display: flex; align-items: flex-start; gap: 16px; padding: 12px 0; border-bottom: 1px solid #edf2f7; font-size: 0.95rem; line-height: 1.6; }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before { content: counter(steps); min-width: 28px; height: 28px; background: #0f3460; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
+    .steps code { background: #edf2f7; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; color: #c53030; }
+    footer { text-align: center; padding: 32px; color: #a0aec0; font-size: 0.875rem; margin-top: 32px; }
+    footer a { color: #e94560; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meet Our Team</h1>
+    <p>A live Git training demo - each card was added by a teammate via a Pull Request!</p>
+    <span class="badge">Git Training Exercise</span>
+  </header>
+  <main>
+    <h2 class="section-title">Team Members</h2>
+    <p class="section-subtitle">Each team member added their own card by editing index.html and raising a PR. Can you spot yours?</p>
+    <div class="team-grid">
+      <!-- EXAMPLE CARD - Do not remove -->
+      <div class="card">
+        <div class="avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">DP</div>
+        <h3>Diptendu Patra</h3>
+        <div class="role">Principal Product Support Engineer</div>
+        <div class="fun-fact">Fun fact: Organiser of this Git training!</div>
+      </div>
+      <!-- ADD YOUR CARD BELOW THIS LINE -->
+      <!-- Copy the block above, update the initials, name, role, and fun fact, then raise a PR! -->
+    </div>
+    <div class="instructions">
+      <h2>Your Mission - Add Your Card!</h2>
+      <ol class="steps">
+        <li>Fork or clone this repository to your local machine.</li>
+        <li>Create a new branch: <code>git checkout -b add-your-name</code></li>
+        <li>Open <code>index.html</code> and find the comment "ADD YOUR CARD BELOW THIS LINE".</li>
+        <li>Copy the example card block and update it with your own name, initials, role, and a fun fact.</li>
+        <li>Choose a gradient for your avatar - e.g. <code>linear-gradient(135deg, #f093fb, #f5576c)</code>.</li>
+        <li>Stage your changes: <code>git add index.html</code></li>
+        <li>Commit: <code>git commit -m "feat: add [your name] to team page"</code></li>
+        <li>Push: <code>git push origin add-your-name</code></li>
+        <li>Go to GitHub and open a Pull Request targeting the main branch.</li>
+        <li>Once approved and merged, refresh this page - your card will appear!</li>
+      </ol>
+    </div>
+  </main>
+  <footer>
+    Built for the Git Training Exercise &nbsp;|&nbsp;
+    <a href="https://www.atlassian.com/git/tutorials" target="_blank">Git Tutorials by Atlassian</a>
+  </footer>
+</body>
+</html>
