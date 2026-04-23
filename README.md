@@ -27,7 +27,7 @@ git checkout -b add-your-name
 # Stage, commit, and push
 git add index.html
 git commit -m "feat: add [your name] to team page"
-git push origin add-your-name
+git push -u origin add-your-branch-name
 ```
 
 Then open a Pull Request on GitHub targeting the `main` branch.
