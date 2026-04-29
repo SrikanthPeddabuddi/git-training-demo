@@ -50,3 +50,4 @@ This is a pure HTML/CSS project. Just open `index.html` in any browser to previe
 
 # This change is from Diptendu branch(not from main)
 # Change for Demo 2
+#This Changes done from Srikanth Peddabuddi(not from main)
